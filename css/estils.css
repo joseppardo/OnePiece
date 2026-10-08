@@ -1,0 +1,230 @@
+/*
+ * estils.css
+ * Full d'estils únic per a les tres pàgines del projecte.
+ * Els comentaris expliquen les decisions principals de maquetació.
+ */
+
+/* Configuració general de la pàgina */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    background-color: #fff900;
+    color: #111;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Contenidor principal: limita l'amplada i centra tota la web */
+.pagina {
+    width: min(100% - 20px, 1000px);
+    margin: 0 auto;
+    background-color: #eeeeee;
+    min-height: 100vh;
+}
+
+/* Capçalera fosca amb el logo centrat */
+.capcalera {
+    background-color: #666666;
+    text-align: center;
+    border-bottom: 8px solid #eeeeee;
+}
+
+.logo {
+    display: block;
+    height: 70px;
+    padding-top: 2px;
+}
+
+.logo img {
+    width: 250px;
+    height: 65px;
+    object-fit: contain;
+}
+
+/* Menú horitzontal */
+.menu {
+    background-color: #666666;
+    border-top: 3px solid #eeeeee;
+    padding: 5px 0 7px;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 14px;
+    font-size: 0.95rem;
+}
+
+.menu a,
+.menu span {
+    color: #d28a24;
+    text-decoration: none;
+}
+
+.menu span {
+    cursor: default;
+}
+
+/* Zona de l'article */
+.article {
+    padding: 10px 15px 18px;
+    line-height: 1.12;
+    font-size: 0.95rem;
+}
+
+/* Títol principal */
+.article h1 {
+    margin: 0 0 12px;
+    color: #22637d;
+    font-size: 1.35rem;
+}
+
+/* Subtítols de les seccions */
+.article h2 {
+    margin: 13px 0 7px;
+    font-size: 1.08rem;
+}
+
+/* Paràgrafs */
+.article p {
+    margin: 0 0 11px;
+    text-align: left;
+}
+
+.introduccio {
+    font-weight: bold;
+    text-align: justify;
+}
+
+/* Data i icones de xarxes socials */
+.article-meta {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-top: 2px solid #888;
+    border-bottom: 2px solid #888;
+    padding: 7px 0;
+    margin: 5px 0;
+}
+
+.article-meta time {
+    margin-right: 3px;
+}
+
+.article-meta img {
+    width: 18px;
+    height: 18px;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+/* Imatge principal centrada */
+.imatge-principal {
+    margin: 6px auto 12px;
+    text-align: center;
+}
+
+.imatge-principal img {
+    display: inline-block;
+    width: min(670px, 90%);
+    height: auto;
+}
+
+/* Publicació de X: mantenim una amplada semblant a la de la captura */
+.tweet {
+    width: 330px;
+    max-width: 100%;
+    margin: 8px 0 12px;
+}
+
+.tweet .twitter-tweet {
+    margin: 0 !important;
+}
+
+/* Llista de curiositats */
+.article ul {
+    margin: 4px 0 10px 20px;
+    padding-left: 18px;
+}
+
+.article li {
+    margin-bottom: 2px;
+}
+
+/* Enllaços: taronja i sense subratllat */
+.article a {
+    color: #d28a24;
+    text-decoration: none;
+}
+
+/* En passar el ratolí, el text adopta el color base i apareix una vora */
+.article a:hover,
+.menu a:hover {
+    color: #111;
+    border: 1px solid #111;
+}
+
+/* Enllaços del final de l'article */
+.article-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-top: 8px;
+}
+
+/* Peu de pàgina morat, com en el model */
+.peu {
+    min-height: 110px;
+    background-color: #9b4dc0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 10px;
+}
+
+.peu a {
+    display: block;
+}
+
+.peu img {
+    max-height: 95px;
+    width: auto;
+    max-width: 45%;
+}
+
+.peu a:hover {
+    border: 0;
+}
+
+/* Petita adaptació per a pantalles estretes */
+@media (max-width: 650px) {
+    .pagina {
+        width: 100%;
+    }
+
+    .menu li {
+        margin: 0 6px;
+        font-size: 0.85rem;
+    }
+
+    .article {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .tweet {
+        width: 100%;
+    }
+}
