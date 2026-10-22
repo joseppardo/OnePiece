@@ -1,0 +1,56 @@
+/* Full d'estils compartit per totes les pàgines del projecte. */
+* { box-sizing: border-box; }
+body { margin:0; background:#fff900; color:#111; font-family: Georgia, "Times New Roman", serif; }
+.page { width:min(100% - 20px, 1000px); margin:0 auto; background:#eee; min-height:100vh; }
+.site-header { background:#666; text-align:center; border-bottom:8px solid #eee; }
+.brand { display:block; height:70px; padding:3px; }
+.brand img { width:250px; height:63px; object-fit:contain; }
+.menu { list-style:none; margin:0; padding:7px; border-top:3px solid #eee; }
+.menu li { display:inline-block; margin:0 12px; }
+.menu a { color:#d28a24; text-decoration:none; }
+.menu a:hover, a:hover { color:#222; border:1px solid #222; }
+.article { padding:12px 15px 20px; font-size:15px; line-height:1.15; }
+h1 { color:#22637d; font-size:1.4rem; margin:0 0 12px; }
+h2 { font-size:1.08rem; margin:14px 0 7px; }
+p { margin:0 0 10px; }
+.intro { font-weight:bold; text-align:justify; }
+.article-meta { display:flex; align-items:center; gap:5px; padding:7px 0; margin:7px 0; border-top:2px solid #888; border-bottom:2px solid #888; }
+.article-meta img { width:18px; height:18px; }
+.article a { color:#d28a24; text-decoration:none; }
+.hero { text-align:center; margin:7px auto 12px; }
+.hero img { width:min(670px,90%); height:auto; }
+.tweet { width:330px; max-width:100%; min-height:70px; margin:10px 0; }
+.article-footer { display:flex; flex-direction:column; gap:7px; margin-top:10px; }
+.article ul { padding-left:25px; }
+.site-footer { background:#9b4dc0; min-height:110px; display:flex; align-items:center; justify-content:center; gap:25px; padding:10px; }
+.site-footer img { max-height:95px; max-width:45%; width:auto; }
+.site-footer a:hover { border:0; }
+/* Flexbox divideix la pàgina d'arcs en la columna de text i la d'imatges. */
+.arcs-layout { display:flex; align-items:flex-start; gap:28px; }
+.arcs-list { flex:1 1 55%; min-width:0; }
+.sagas { padding-left:28px; }
+.saga { font-weight:bold; margin:0 0 10px; }
+.saga ol { font-weight:normal; margin:5px 0 0; padding-left:30px; }
+.saga ol li { margin:2px 0; }
+/* Les imatges ocupen la segona columna i mantenen la mida indicada al model. */
+.arcs-images { flex:0 1 40%; display:flex; flex-direction:column; align-items:center; gap:12px; }
+.arcs-images img { width: min(100%, 325px); height:400px; object-fit:cover; }
+/* Índex de personatges amb pics circulars i enllaços interns. */
+.character-index { list-style-type:circle; padding-left:28px; columns:2; }
+.character-index li { margin:4px 0; }
+.characters { margin:0; }
+.character { display:flow-root; border-bottom:1px solid #aaa; padding:8px 0 12px; scroll-margin-top:10px; }
+.character dt { font-weight:bold; margin-bottom:5px; }
+.character dd { margin:0; }
+.portrait { width:100px; height:150px; object-fit:cover; float:left; margin:0 12px 8px 0; }
+.character dd p { text-align:justify; }
+.more { clear:both; padding-top:3px; }
+@media(max-width:700px) {
+ .page { width:100%; }
+ .article { padding:10px; }
+ .arcs-layout { flex-direction:column; }
+ .arcs-images { width:100%; flex-direction:row; flex-wrap:wrap; }
+ .arcs-images img { width:30%; height:180px; }
+ .character-index { columns:1; }
+ .menu li { margin:0 5px; }
+}
